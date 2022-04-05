@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --veryLightPink: #C7C7C7;
+  --white: #FFFFFF;
+  --textInputField: #F7F7F7;
+  --black: #000000;
+  --hospitalGreen: #ACD9B2;
+  --dark: #232830;
+
+  /* Fonts */
+  --primaryFontFamily: 'Quicksand', sans-serif;
+  --secondaryFontFamily: 'Roboto', sans-serif;
+  --primaryHeadline1Light: var(--light) 1.8rem/normal var(--primaryFontFamily);
+  --primaryHeadline1Bold: var(--bold) 1.8rem/normal var(--primaryFontFamily);
+  --primaryHeadline1Regular: var(--regular) 1.8rem/normal var(--primaryFontFamily);
+  --primaryHeadline2Regular: var(--regular) 1.6rem/normal var(--primaryFontFamily);
+  --primaryHeadline2Bold: var(--bold) 1.6rem/normal var(--primaryFontFamily);
+  --primaryHeadline2Light: var(--light) 1.6rem/normal var(--primaryFontFamily);
+  --primaryHeadline2Medium: var(--medium) 1.6rem/normal var(--primaryFontFamily);
+  --primaryHeadline3Bold: var(--bold) 1.4rem/normal var(--primaryFontFamily);
+  --primaryHeadline3Regular: var(--regular) 1.4rem/normal var(--primaryFontFamily);
+
+  --secondaryHeadline1Bold: var(--bold) 1.8rem/normal var(--secondaryFontFamily);
+  --secondaryHeadline3Bold: var(--bold) 1.6rem/normal var(--secondaryFontFamily);
+
+  /* Font weights */
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+
+  /* Spacing */
+  --spaceHalf: .2rem;
+  --space: .4rem;
+  --space2: .8rem;
+  --space3: 1.2rem;
+  --space4: 1.6rem;
+  --space5: 2rem;
+
+  /* Border radius */
+  --borderRadius: .8rem;
+}
