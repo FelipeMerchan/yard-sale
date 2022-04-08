@@ -20,7 +20,6 @@
     .form-container {
       display: grid;
       grid-template-rows: auto 1fr auto;
-      justify-items: center;
       width: 100%;
       max-width: 30rem;
     }
@@ -35,33 +34,24 @@
       margin-block-end: 4.8rem;
     }
 
-    .title {
-      margin-block-end: var(--space3);
-      font: var(--primaryHeadline1Bold);
-      text-align: center;
-      color: var(--dark);
-    }
-
-    .subtitle {
-      margin-block-end: var(--space5);
-      color: var(--veryLightPink);
-      font: var(--primaryHeadline2Light);
-      text-align: center;
-    }
-
     .form {
       display: flex;
       flex-direction: column;
     }
 
-    .generic-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 13.2rem;
-      height: 13.2rem;
-      margin: var(--space) 0 calc(var(--space) * 6);
-      border-radius: 50%;
+    .form__label {
+      margin-block-end: var(--space2);
+      font: var(--primaryHeadline3Bold);
+      color: var(--dark);
+    }
+
+    .input {
+      height: 3rem;
+      padding: var(--space2);
+      margin-block-end: var(--space5);
+      border: none;
+      font: var(--primaryHeadline2Regular);
+      border-radius: var(--borderRadius);
       background-color: var(--textInputField);
     }
 
@@ -80,13 +70,9 @@
       margin-block-start: var(--space2);
     }
 
-    .resend-copy {
-      margin-block-start: var(--space5);
-      font: var(--primaryHeadline3Regular);
-    }
-
-    .resend-copy span {
-      color: var(--veryLightPink);
+    .form__link {
+      margin: var(--space5) 0;
+      text-align: center;
     }
 
     .link {
@@ -95,9 +81,35 @@
       text-decoration: none;
     }
 
+    .secondary-button {
+      width: 100%;
+      height: 5rem;
+      font: var(--primaryHeadline2Bold);
+      border: 1px solid var(--hospitalGreen);
+      color: var(--hospitalGreen);
+      border-radius: var(--borderRadius);
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+    .signup-button {
+      position: absolute;
+      left:   var(--space2);
+      right:  var(--space2);
+      bottom: 0;
+      width: calc(100% - var(--space4));
+      max-width: 30rem;
+      margin: 0 auto var(--space5);
+    }
+
     @media screen and (min-width: 640px) {
       .logo {
         display: none;
+      }
+
+      .signup-button {
+        position: initial;
+        margin: calc(var(--space) * 7) auto 0;
       }
     }
   </style>
@@ -117,28 +129,31 @@
               height="31"
             />
           </figure>
-          <h1 class="title">
-            Email has been sent!
-          </h1>
-          <p class="subtitle">
-            Please check your inbox for instructions on how to reset the password
-          </p>
-          <figure class="generic-image">
-            <img
-              class="generic-image__picture"
-              src="./assets/icons/email.svg"
-              alt="Logo de Yard Sale"
-              loading="eager"
-              width="80"
-              height="51"
+          <form class="form">
+            <label for="email" class="form__label">Email address</label>
+            <input
+              class="form__input input"
+              type="email"
+              id="email"
+              placeholder="Youremail@gmail.com"
             />
-          </figure>
-          <button class="primary-button">Login</button>
-
-          <p class="resend-copy">
-            <span>Didn't receive the email?</span>
-            <a class="link" href="/">Resend</a>
-          </p>
+            <label for="password" class="form__label">Password</label>
+            <input
+              class="form__input input"
+              type="password"
+              id="password"
+              placeholder="*********"
+            />
+            <input
+              class="primary-button form__button"
+              type="submit"
+              value="Login"
+            />
+            <a class="form__link link" href="/">Forgot my password</a>
+          </form>
+          <button class="secondary-button signup-button">
+            Sign up
+          </button>
         </div>
       </div>
     </div>
