@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yard Sale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/index.css">
+  <style>
+    .mobile-menu {
+      padding: var(--space5);
+    }
+
+    .mobile-menu__list {
+      padding: 0;
+      margin: calc(var(--space) * 7) 0;
+      list-style: none;
+    }
+
+    .mobile-menu__list:first-child {
+      border-block-end: 1px solid var(--veryLightPink);
+    }
+
+    .mobile-menu__item {
+      margin-block-end: calc(var(--space) * 7);
+    }
+
+    .mobile-menu__item a {
+      /* margin-block-end: var(--space5); */
+      font: var(--primaryHeadline2Bold);
+      text-decoration: none;
+      color: var(--dark);
+    }
+
+    .mobile-menu .email {
+      font: var(--primaryHeadline3Regular);
+    }
+
+    .mobile-menu .sign-out {
+      font: var(--primaryHeadline3Regular);
+      color: var(--hospitalGreen);
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-menu">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a href="/">All</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="/">Clothes</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="/">Electronics</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="/">Furnitures</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="/">Toys</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="/">Others</a>
+      </li>
+    </ul>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a href="/">My orders</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a href="/">My account</a>
+      </li>
+    </ul>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="email" href="/">youremail@gmail.com</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="sign-out" href="/">Sign out</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
