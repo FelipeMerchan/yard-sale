@@ -7,6 +7,9 @@
   --hospitalGreen: #ACD9B2;
   --dark: #232830;
 
+  /* Box shadow */
+  --boxShadowDark: 0px 1px 14px -5px rgba(35,40,48,0.35);
+
   /* Fonts */
   --primaryFontFamily: 'Quicksand', sans-serif;
   --secondaryFontFamily: 'Roboto', sans-serif;
@@ -21,7 +24,8 @@
   --primaryHeadline3Regular: var(--regular) 1.4rem/normal var(--primaryFontFamily);
 
   --secondaryHeadline1Bold: var(--bold) 1.8rem/normal var(--secondaryFontFamily);
-  --secondaryHeadline3Bold: var(--bold) 1.6rem/normal var(--secondaryFontFamily);
+  --secondaryHeadline2Bold: var(--bold) 1.6rem/normal var(--secondaryFontFamily);
+  --secondaryHeadline3Bold: var(--bold) 1.4rem/normal var(--secondaryFontFamily);
 
   /* Font weights */
   --light: 300;
