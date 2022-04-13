@@ -10,48 +10,152 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/index.css">
   <style>
+    .my-order {
+      width: 100%;
+      height: 100vh;
+    }
 
+    .my-order-content {
+      display: grid;
+      width: 100%;
+      max-width: 38rem;
+      margin: 0 auto;
+    }
+
+    .title {
+      display: none;
+      margin-block-end: calc(var(--space) * 10);
+      font: var(--primaryHeadline1Bold);
+      text-align: start;
+      color: var(--dark);
+    }
+
+    .order {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space4);
+      border-radius: var(--borderRadius);
+      background-color: var(--textInputField);
+    }
+
+    .order__details {
+      margin: 0;
+    }
+
+    .order__date {
+      display: block;
+      margin-block-end: var(--space);
+      font: var(--secondaryHeadline3Bold);
+      color: var(--dark);
+    }
+
+    .order__amount {
+      font: var(--secondaryHeadline3Regular);
+      color: var(--veryLightPink);
+    }
+
+    .order__price {
+      font: var(--secondaryHeadline3Bold);
+      color: var(--dark);
+    }
+
+    .shopping-cart-list {
+      margin-block-start: var(--space5);
+    }
+
+    .shopping-cart:not(:last-child) {
+      margin-block-end: var(--space5);
+    }
+
+    .shopping-cart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .shopping-cart__details {
+      display: inherit;
+      align-items: inherit;
+    }
+
+    .shopping-cart__image-container {
+      margin: 0 var(--space4) 0 0;
+      width: 7rem;
+      height: 7rem;
+      border-radius: calc(var(--borderRadius) * 2);
+      overflow: hidden;
+    }
+
+    .shopping-cart__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .shopping-cart__title {
+      font: var(--secondaryHeadline3Regular);
+      color: var(--veryLightPink);
+    }
+
+    .shopping-cart__price {
+      font: var(--secondaryHeadline3Bold);
+      color: var(--dark);
+    }
+
+    @media screen and (min-width: 640px) {
+      .title {
+        display: initial;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="my-order">
     <div class="wrapper">
       <div class="my-order-content">
+        <h1 class="title">My order</h1>
         <div class="order">
-          <p>
-            <span>04.25.2022</span>
-            <span>6 articles</span>
+          <p class="order__details">
+            <span class="order__date">04.25.2022</span>
+            <span class="order__amount">6 articles</span>
           </p>
-          <p>$560.00</p>
+          <p class="order__price">$560.00</p>
         </div>
-        <article class="shopping-cart">
-          <figure class="shopping-cart__image">
-            <img
-              class="shopping-cart__image"
-              src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Producto"
-              loading="eager"
-              width="150"
-              height="150"
-            />
-          </figure>
-          <p class="shopping-cart__title">Bike</p>
-          <p class="shopping-cart__price">$30.00</p>
-        </article>
-        <article class="shopping-cart">
-          <figure class="shopping-cart__image">
-            <img
-              class="shopping-cart__image"
-              src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Producto"
-              loading="eager"
-              width="150"
-              height="150"
-            />
-          </figure>
-          <p class="shopping-cart__title">Bike</p>
-          <p class="shopping-cart__price">$30.00</p>
-        </article>
+        <div class="shopping-cart-list">
+          <article class="shopping-cart">
+            <div class="shopping-cart__details">
+              <figure class="shopping-cart__image-container">
+                <img
+                  class="shopping-cart__image"
+                  src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Producto"
+                  loading="eager"
+                  width="150"
+                  height="150"
+                />
+              </figure>
+              <p class="shopping-cart__title">Bike</p>
+            </div>
+            <p class="shopping-cart__price">$30.00</p>
+          </article>
+          <article class="shopping-cart">
+            <div class="shopping-cart__details">
+              <figure class="shopping-cart__image-container">
+                <img
+                  class="shopping-cart__image"
+                  src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Producto"
+                  loading="eager"
+                  width="150"
+                  height="150"
+                />
+              </figure>
+              <p class="shopping-cart__title">Bike</p>
+            </div>
+            <p class="shopping-cart__price">$30.00</p>
+          </article>
+        </div>
       </div>
     </div>
   </div>
