@@ -72,10 +72,14 @@
       color: var(--dark);
     }
 
-    .value {
-      margin: var(--space) 0 calc(var(--space) * 10);
-      font: var(--primaryHeadline2Medium);
-      color: var(--veryLightPink);
+    .input {
+      height: 3rem;
+      padding: var(--space2);
+      margin-block-end: var(--space5);
+      border: none;
+      font: var(--primaryHeadline2Regular);
+      border-radius: var(--borderRadius);
+      background-color: var(--textInputField);
     }
 
     .primary-button {
@@ -87,17 +91,6 @@
       border-radius: var(--borderRadius);
       cursor: pointer;
       background-color: var(--hospitalGreen);
-    }
-
-    .secondary-button {
-      width: 100%;
-      height: 5rem;
-      font: var(--primaryHeadline2Bold);
-      border: 1px solid var(--hospitalGreen);
-      color: var(--hospitalGreen);
-      border-radius: var(--borderRadius);
-      cursor: pointer;
-      background-color: transparent;
     }
 
     .form__button {
@@ -131,16 +124,31 @@
           <form class="form">
             <div>
               <label for="name" class="form__label">Name</label>
-              <p class="value">Camila Yokoo</p>
+              <input
+                class="form__input input"
+                type="text"
+                id="name"
+                placeholder="Your name"
+              />
               <label for="email" class="form__label">Email</label>
-              <p class="value">camilayokoo@gmail.com</p>
+              <input
+                class="form__input input"
+                type="email"
+                id="email"
+                placeholder="youremail@gmail.com"
+              />
               <label for="password" class="form__label">Password</label>
-              <p class="value">***********</p>
+              <input
+                class="form__input input"
+                type="password"
+                id="password"
+                placeholder="*********"
+              />
             </div>
             <input
-              class="secondary-button form__button"
+              class="primary-button form__button"
               type="submit"
-              value="Edit"
+              value="Save"
             />
           </form>
         </div>
