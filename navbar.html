@@ -3,8 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/index.css">
   <title>Document</title>
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space3);
+      border-bottom: 1px solid var(--veryLightPink);
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .navbar-left ul,
+    .navbar-right ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    
+    .navbar-left {
+      display: flex;
+
+      & ul {
+        display: none;
+        margin-left: var(--space3);
+      }
+    }
+
+    .navbar-left ul li a,
+    .navbar-right ul li a {
+      padding: var(--space2);
+      border: 1px solid var(--white);
+      border-radius: var(--borderRadius);
+      text-decoration: none;
+      color: var(--veryLightPink);
+    }
+
+    .navbar-left ul li a:hover,
+    .navbar-right ul li a:hover {
+      border: 1px solid var(--hospitalGreen);
+      color: var(--hospitalGreen);
+    }
+
+    .navbar-email {
+      display: none;
+      margin-right: var(--space3);
+      font-size: var(--primaryHeadline3Regular);
+      color: var(--veryLightPink);
+    }
+
+    .navbar-shopping-cart {
+      position: relative;
+    }
+
+    .navbar-shopping-cart {
+      & div {
+        position: absolute;
+        top:   -4px;
+        right: -3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        font-size: var(--primaryHeadline3Bold);
+        border-radius: 50%;
+        background-color: var(--hospitalGreen);
+      }
+    }
+
+    @media (min-width: 640px) {
+      .menu {
+        display: none;
+      }
+
+      .navbar-left {
+        & ul {
+          display: flex;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+      }
+
+      .navbar-right {
+        & ul {
+          display: flex;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+      }
+
+      .navbar-email {
+        display: initial;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -33,11 +137,13 @@
       </ul>
     </div>
     <div class="navbar-right">
-      <li>platzi@example.com</li>
-      <li class="navbar-shopping-cart">
-        <img src="./assets/icons/icon_shopping_cart.svg" alt="Shopping cart" />
-        <div>2</div>
-      </li>
+      <ul>
+        <li class="navbar-email">platzi@example.com</li>
+        <li class="navbar-shopping-cart">
+          <img src="./assets/icons/icon_shopping_cart.svg" alt="Shopping cart" />
+          <div>2</div>
+        </li>
+      </ul>
     </div>
   </nav>
 </body>
